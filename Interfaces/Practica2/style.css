@@ -1,0 +1,48 @@
+.tituloPrincipal {
+    text-align: center;
+}
+
+.contenedor1 {
+    width: 15%;
+    float: left;
+    margin-left: 12%;
+    margin-right: 2%;
+}
+
+.contenedorPrincipal {
+    width: 45%;
+    float: left;
+    margin-right: 15%;
+}
+
+.contenedor2 {
+padding-right: 2px;
+padding-left: 0px;
+float: left;
+padding-bottom: 2px;
+width: 30%;
+padding-top: 2px;
+list-style-type:none;
+
+}
+
+.contenedor3 {
+padding-right: 2px;
+display: flex;
+padding-left: 2px;
+padding-bottom: 2px;
+float: left;
+width: 30%;
+padding-top: 2px;
+list-style-type:none;
+}
+
+.contenedor4 {
+padding-right: 0px;
+display: flex;
+padding-left: 0px;
+float: left;
+padding-bottom: 0px;
+width: 30%;
+padding-top: 0px
+}

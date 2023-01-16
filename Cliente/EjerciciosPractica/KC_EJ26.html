@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ26</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*
+			KC_EJ26
+      Crear un programa con una función pintaFila() que arme las filas de una tabla html. 
+      Completar el programa con la estructura de una tabla e invocando a la función N veces, 
+      donde N es un valor introducido por el usuario.
+
+  		*/
+      function pintaFila(){
+      debugger;
+      let num = parseInt(prompt("Introduce el numero de filas"));
+      document.querySelector("#tabla").innerHTML += "<table border = 2px, borderColor = solidblack>";
+      for(let i = 0 ; i<=num;i++){
+        document.querySelector("#tabla").innerHTML += "<table border = 2px, borderColor = solidblack><tr><td>hola</td></tr>";
+      }
+      document.querySelector("#tabla").innerHTML += "</table>";
+     }
+     pintafila();
+  </script>
+  <button class="btn-default" onclick="pintaFila();">Pruébame</button><br>
+
+  <div id ="tabla">
+    
+  </div>
+  </body>
+</html>

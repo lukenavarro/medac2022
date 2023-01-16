@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id = "lista" >
+        
+    </ul>
+    <br>
+    <input id="cuadroTexto" placeholder="Introduce tu texto">
+    <button onclick = "insertar();">Inserte su Texto</button>
+    <button onclick = "reset();">Borre su Texto</button>
+</body>
+</html>
+
+<script>
+var contador = 0;
+var ulList = document.querySelector("#lista");
+
+function insertar(){
+    contador++;
+    document.getElementById("lista").innerHTML += "<li id = "+contador+">"+document.getElementById("cuadroTexto").value+"</li>";
+    document.getElementById("lista").innerHTML += `<button id = "botonBorrar`+contador+`" onclick="borrar(`+contador+`);">Delete</button>`;
+    document.getElementById("lista").innerHTML += `<button id = "botonEditar`+contador+`" onclick="editar(`+contador+`);">Editar</button>`;
+    document.getElementById(contador).addEventListener("clicked",cambiarColor(contador));
+
+}
+
+function reset(){
+    let elemento;
+    for(let i = 0; i<=contador-1;i++){
+        elemento  = document.getElementById(i)
+        ulList.remove(elemento);
+    }
+}
+function borrar(id){
+    let elemento;
+    elemento  = document.getElementById(id);
+    ulList.removeChild(elemento);
+    elemento  = document.getElementById("botonBorrar"+id);
+    ulList.removeChild(elemento);
+    elemento  = document.getElementById("botonEditar"+id);
+    ulList.removeChild(elemento);
+    }
+
+
+function editar(id){
+    document.getElementById(id).innerHTML = "<li id = "+id+">"+document.getElementById("cuadroTexto").value+"</li>";
+}
+function cambiarColor(id){
+    document.getElementById(id).style.color="red";
+}
+
+
+</script>

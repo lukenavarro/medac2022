@@ -1,0 +1,46 @@
+#Ejercicio1{
+    color: red;
+    font-size: 16px;
+    animation-name: Ejercicio1;
+    animation-duration: 10s;
+    animation-direction: normal;
+}
+@keyframes Ejercicio1{
+    from{
+        margin-left: 100%;
+    }
+    100%{
+        color: black;
+        font-size: 12px;
+    }
+    to{
+        margin-right: 100%;
+    }
+}
+#Ejercicio2{
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    background-color: blue;
+    animation-name: Ejercicio2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes Ejercicio2{
+from{
+    margin-right: 100%;
+}
+100%{
+    
+}
+to{
+    margin-left: 100%;
+}
+}
+
+#Ejercicio3:hover{
+    transform: scale(110%);
+    transition: 1s linear;
+}

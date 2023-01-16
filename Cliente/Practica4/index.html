@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <title>Prueba</title>
+    <meta charset="utf-8" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ejercicios. Tema 4</h1>
+        <h2>BUCLES</h2>
+    </div>
+    <div class="container">
+        <h4><strong>Instrucciones básicas</strong></h4>
+        <ul>
+            <li>
+                El archivo que contenga la lógica de los programas
+                debe estar en un archivo aparte.
+                <strong>¡No se debe embeber el código en el mismo HTML!</strong>
+            </li>
+            <li>
+                Para la introducción de datos se debe evitar el uso del prompt().
+                Preferiblemente se deben usar "inputs", con un id asociado.
+            </li>
+            <li>
+                Los datos que introducís en los "inputs" los podéis obtener con
+                la función <strong>document.querySelector("#idDeVuestroInput").value;</strong> o 
+                <strong>document.getElementById("idDeVuestroInput");</strong>
+            </li>
+            <li>
+                document.querySelector("#idDeVuestroInput").value; os devuelve un string, osea, acordaros de parsear el
+                resultado a number o a lo que os convenga.
+            </li>
+            <li>
+                El objetivo de esta actividad es que uséis bucles.
+            </li>
+            <li>
+                Los resultados los podéis mostrar como queráis.
+                Podéis usar alert() o console.log() para mostrar los resultados, o podéis usar la
+                función <strong>document.querySelector(#idDelElementoQueQueráis).innerHTML = "el resultado"</strong>
+            </li>
+            <li>
+                Se debe poder ejecutar el ejercicio que uno desee, es decir, que tenéis
+                que asociar un botón (por ejemplo) a una función, y cuando se pulse el botón, que
+                se ejecute dicha función (lo hemos hecho ya unas cuantas veces, si tenéis dudas, decidmelo).
+            </li>
+            <li>
+                Para la entrega, se debe entregar un archivo comprimido en zip (o rar) que contenga
+                el archivo html y el archivo js (como mínimo).
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h4><strong>Ejemplos</strong></h4>
+    </div>
+    <div class="container">
+        <p>
+            <strong>x)</strong>
+            Escribe un programa que lea un valor y después lo muestre.
+        </p>
+        <input id="inputPrueba" placeholder="input de prueba"></input><br>
+        <button class="btn-default" onclick="funcionPrueba();">Pruébame</button><br>
+        <p id="parrafoPrueba"></p>
+    </div>
+    <div class="container">
+        <p>
+            <strong>y)</strong>
+            Escribe un programa que lea un valor y después muestre los valores
+            desde 0 hasta el valor que se ha introducido.
+        </p>
+        <input id="inputPrueba2" placeholder="input de prueba 2"></input><br>
+        <button class="btn-default" onclick="funcionPrueba2();">Pruébame 2</button><br>
+        <p id="parrafoPrueba2"></p>
+    </div>
+
+    <div class="container">
+        <h4><strong>Ejercicios</strong></h4>
+    </div>
+    <div class="container">
+        <p>
+            <strong>a)</strong>
+            Escribe un programa que muestre por pantalla
+            los 20 primeros numeros enteros naturales. (1, 2, 3 ... 20). (2 pts)
+            <button class="btn-default" onclick="ejercicio1();">Pruébame</button><br>
+            <p id ="parrafoEjercicio1"></p>
+        </p>
+    </div>
+    <div class="container">
+        <p>
+            <strong>b)</strong>
+            Escribe un programa que muestre los numeros
+            pares comprendidos entre el 1 y el 100. (2 pts)
+            <button class="btn-default" onclick="ejercicio2();">Pruébame</button><br>
+            <p id ="parrafoEjercicio2"></p>
+
+        </p>
+    </div>
+    <div class="container">
+        <p>
+            <strong>c)</strong>
+            Escribe un programa que lea por teclado
+            un numero positivo y muestre por pantalla el valor factorial
+            de ese numero. (N!) (2 pts)
+        </p>
+        <p>Ejemplo.</p>
+        <p>1! = 1</p>
+        <p>2! = 2 * 1</p>
+        <p>3! = 3 * 2 * 1</p>
+        <p>N! = N * (N-1) * (N-2) * ... * 1</p>
+        <button class="btn-default" onclick="ejercicio3();">Pruébame</button><br>
+        <p id ="parrafoEjercicio3"></p>
+
+    </div>
+    <div class="container">
+        <p>
+            <strong>d)</strong>
+            Escribe un programa que calcule el valor de 2 elevado a un número que el usuario introducirá por teclado.
+            Este numero que se introduce por teclado no puede ser mayor que 10.
+            Al final el programa nos mostrara el resultado de esa potencia.
+            NO SE PUEDE USAR EL OPERADOR DE POTENCIA (**)(2 pts)
+        </p>
+        <p>(no... tampoco el Math.pow())</p>
+        <button class="btn-default" onclick="ejercicio4();">Pruébame</button><br>
+        <p id ="parrafoEjercicio4"></p>
+    </div>
+    <div class="container">
+        <p>
+            <strong>e)</strong>
+            Escribe un programa que dada una cantidad de euros que el usuario
+            introduce (múltiplo de 5 €) mostrará los billetes de
+            cada tipo que serán necesarios para alcanzar dicha cantidad (utilizando
+            billetes de 500, 200, 100, 50, 20, 10 y 5). Hay que indicar el mínimo de
+            billetes posible. Por ejemplo, si el usuario introduce 145 el programa indicará
+            que será necesario 1 billete de 100 €, 2 billetes de 20 € y 1 billete de 5 € (no
+            será válido por ejemplo 29 billetes de 5, que aunque sume 145 € no es el
+            mínimo número de billetes posible). (2 pts)
+        </p>
+        <input id="dinero" placeholder="introduce el dinero total "></input><br>
+        <button class="btn-default" onclick="ejercicio5();">Pruébame</button><br>
+        <p id ="parrafoEjercicio5"></p>
+
+    </div>
+    <div>
+        <hr>
+    </div>
+    <div class="container">
+        <h4><strong>Extra</strong></h4>
+    </div>
+    <div class="container">
+        <p>
+            <strong>z)</strong>
+            Escribe un programa que juegue al ahorcado
+        </p>
+        <input type="password" name="palJuego" id="palJuego" value="KILLME" />            
+        <button class="btn-default" onclick="confirmWord();">Confirmar Palabra</button>
+        <br>
+        <input id="letra" placeholder="introduce una letra" />
+        <button class="btn-default" onclick="jugar();">Probar letra</button>
+        <p id = "fallos"></p>
+    </div>
+    <br><br><br>
+    <div class="container">
+        <p id="solucion"></p>
+    </div>
+</body>
+
+<footer>
+    <hr>
+    <hr>
+    <hr>
+</footer>
+
+</html>
+<script src="logica.js"></script>
+<script src="ahorcado.js"></script>

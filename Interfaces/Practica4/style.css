@@ -1,0 +1,29 @@
+    .contenedor { 
+    border: 5px solid red;  
+    background-color: cadetblue;
+    padding: 200px;
+    } 
+    .caja1 { 
+    border: 5px solid green; 
+    margin-top: 25; 
+    margin-left: 18px; 
+    width: 50%; 
+    padding: 15px; 
+    background-color: yellow;
+    } 
+    .caja2 { 
+    border: 5px solid blue; 
+    margin-top: 35px; 
+    margin-left: 70px; 
+    width: 50%; 
+    padding: 100px; 
+    background-color: aquamarine;
+    } 
+    .caja3 { 
+    border: 5px solid orange; 
+    margin-top: 51px; 
+    margin-left: 200px; 
+    width: 90%; 
+    padding: 78x; 
+    background-color: beige;
+    } 

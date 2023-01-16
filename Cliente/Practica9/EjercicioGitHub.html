@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <p>Comprobador del usuario de github</p>
+    <form>
+        <input type ="text" id = "usuario" name ="usuario" placeholder="Nombre del usuario de github">
+        <br>
+        <button type ="button" id = "boton">Enviar</button>
+    </form>
+    <p id = "parrafoSolucion"></p>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(()=> chequearUsuario());
+        function chequearUsuario(){
+            $("#boton").click(function(){
+                let usuario = $("#usuario").val();
+                let solucion= "";
+                $.get(`https://api.github.com/users/`+usuario+`/repos`,function(data){
+                data.forEach(element => {
+                    solucion += element.name+"\n";
+                });
+                $("#parrafoSolucion").html(solucion);
+
+            });
+            })
+          
+        };
+    </script>
+</body>
+</html>
