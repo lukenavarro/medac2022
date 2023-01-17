@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <script>
+        function checkForm(event){
+            let form1 =document.getElementById("formulario");          
+            let cookies = `name=${form1["name"].value}`;
+            cookies+=";max-age=3600000";
+            document.cookie=cookies;
+        }
+        function loadListeners(){
+            let form1 =document.getElementById("formulario");
+            form1.addEventListener("submit", checkForm);
+            let all = document.cookie;
+            if(!all){
+                return;
+            }
+            cookies = all.split(";");
+            cookies.forEach(element => {
+                let indexOf = element.indexOf("=");
+                let name=element.substring(0,indexOf);
+                let value = decodeURIComponent(element.substring(indexOf+1));
+                form1[name].value=value;
+            });
+        }
+        window.onload=loadListeners;
+    </script>
+</head>
+<body>
+    <form action="" id="formulario" method="POST">
+
+        <input placeholder="Usuario" name="name" type="text"/>
+        <input placeholder="Password" name="pass" type="password" />
+        <input type="submit" id="buttonsubmit"/>
+    </form>
+  
+</body>
+</html>

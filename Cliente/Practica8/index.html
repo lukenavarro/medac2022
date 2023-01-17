@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registro de un usuario</h1>
+    <form>
+        <p>Nombre</p>
+        <input type = "text" placeholder="Nombre" id = "nombre" maxlength="20">
+        <br>
+        <p>Apellidos</p>
+        <input type = "text" placeholder="Apellidos" id = "apellidos" maxlength="20">
+        <br>
+        <p>Telefono</p>
+        <input type = "text" placeholder = "telefono" id = "telefono" required>
+        <br>
+        <p>Email</p>
+        <input type = "text" placeholder = "email" id = "email" required>
+        <br>
+        <p>Contraseña</p>
+        <input type = "password" id = "contraseña" maxlength="12" minlength="6">
+        <br>
+        <p>Repetir Contraseña</p>
+        <input type = "password" id ="repetirContraseña" maxlength="12" minlength="6">
+        <br>
+        <input type ="submit" onclick=checkform()>
+        <p><b>El nombre y los apellidos no pueden pasar de los 20 caracteres</b></p>
+        <p><b>Email y telefono son obiligatorios</b></p>
+        <p><b>Contraseña y repetir contraseña tienen que ser iguales y tener una longitud entre 6 y 12 caracteres</b></p>
+    </form>
+    <script src = "index.js"></script>
+</body>
+</html>
