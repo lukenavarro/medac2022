@@ -26,10 +26,14 @@ function comprobarLongitud(type){
             }
             break;
     }
-
+    return true;
 }
 
 function checkForm(){
-    comprobarContrasenia();
-    comprobarLongitud();
+    if (!comprobarContrasenia()|| !comprobarLongitud("nombre") ||!comprobarLongitud("apellidos")){
+        return false;
+    }else{
+        return true;
+    }
+
 }
