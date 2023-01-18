@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Practica 8</title>
+    <title>Formulario Practica 9</title>
 </head>
 <body>
     <h1>Registro de un usuario</h1>
-    <form>
+    <form id = "formulario" method="" action = "">
         <p>Nombre</p>
         <input type = "text" placeholder="Nombre" id = "nombre" maxlength="20">
         <br>
@@ -27,7 +27,7 @@
         <p>Repetir Contraseña</p>
         <input type = "password" id ="repetirContraseña" maxlength="12" minlength="6">
         <br>
-        <input type ="button" onclick= "return checkForm()" placeholder="Enviar Formulario">
+        <input type ="submit" id="submit"  placeholder="Enviar Formulario">
         <p><b>El nombre y los apellidos no pueden pasar de los 20 caracteres</b></p>
         <p><b>Email y telefono son obiligatorios</b></p>
         <p><b>Contraseña y repetir contraseña tienen que ser iguales y tener una longitud entre 6 y 12 caracteres</b></p>
