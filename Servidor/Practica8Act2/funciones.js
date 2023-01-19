@@ -1,4 +1,8 @@
+
+// Exportacion de las funciones
 module.exports = {sumar, restar, esPrimo, esPar, factorial};
+// Funciones basicas del programa
+
 function sumar(num1, num2){
     return num1+num2;
 }

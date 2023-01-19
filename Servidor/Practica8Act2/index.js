@@ -1,3 +1,5 @@
+// para ejecutar el programa usaremos la siguiente instruccion de node: node index.js [Opcion] [num1] [num2]
+// Utilizaremos los argumentos para leer los valores de los numeros.
 const funciones = require("./funciones.js");
 const argvs = process.argv;
 const argv = argvs.slice(2);
