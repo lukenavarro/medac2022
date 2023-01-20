@@ -12,11 +12,9 @@ function obtenerDatos($conexion){
     echo "<td> NOMBRE </td>";
     echo "<td> Apellidos </td>";
     echo "</tr>";
-    while($row = mysqli_fetch_object($valores))
+    while($row = $valores ->fetch_assoc($valores))
         echo "<tr>";
-        foreach ($row as $rowValue){
-            echo "<td>$rowValue</td>";
-        }
+        echo "<td>".$row["id"]."</td><td>".$row["nombre"]."</td><td>".$row["apellidos"]."</td>";
         echo "</tr>";
     echo "</table>";
     $valores -> free();

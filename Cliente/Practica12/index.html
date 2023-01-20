@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 9</title>
+</head>
+
+<body>
+    <h1>Tema 9 actividad 1 JQuery</h1>
+
+
+    <input type="button" name="btn-1" value="Tema Oscuro">
+    <input type="button" name="btn-2" value="Tema Claro">
+
+    <img src="https://media.tenor.com/awdwRkbJzCgAAAAC/goku.gif" id="goku" width="500px">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("input[name='btn-1']").click(function () {
+                $("body").css({
+                    "background-color": "black",
+                    "color": "white",
+                    "font-size": "18px",
+                    "line-height": "25px",
+                    "font-family": "Verdana"
+                });
+            })
+            $("input[name='btn-2']").click(function () {
+                $("body").removeAttr('style')({
+                });
+            })
+            $("#goku").click(function () {
+                $("#goku").attr("src", "https://steamuserimages-a.akamaihd.net/ugc/100602123313956600/1D62CCB0B24BDC8F682A117ED846432CA1DBDF70/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false")
+            })
+            $(document).keydown(function (event) {
+                if (event.keyCode === 107) {
+                    $("#goku").attr("width", "800px")
+                }
+
+            })
+            $(document).keydown(function (event) {
+                if (event.keyCode === 109) {
+                    $("#goku").attr("width", "500px")
+                }
+
+            })
+            $(document).keydown(function (event) {
+                if (event.keyCode === 27) {
+                    $("body").append('<img src="https://i.pinimg.com/736x/0b/bb/08/0bbb08833649437f70a4a649bf6cb786.jpg" width="500px"/>')
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>
