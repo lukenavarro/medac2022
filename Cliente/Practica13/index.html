@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "form">
+        <p>Valor</p>
+        <input id = "grados" type = "number" placeholder="Introduzca los grados" > 
+        <br>
+        <p>Tipo Conversion</p>
+        <input type = "radio" id = "celsius" onclick='document.getElementById("fahrenheit").checked  =false ' value="celsius"> 
+        <label for ="celsius">Celsisus</label>
+        <input type = "radio" id = "fahrenheit" onclick='document.getElementById("celsius").checked  =false' value="fahrenheit"> 
+        <label for ="fahrenheit">Fahrenheit</label>
+        <br>
+        <br>
+        <button id = "transformar">Transformar los grados</button>
+        <p id = "solucion">Los grados transformados son : </p>
+    </div>
+    <script src  = "main.js">
+    </script>
+</body>
+</html>

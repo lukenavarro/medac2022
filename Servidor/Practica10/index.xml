@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<definitions name="CantidadDeLluvia"
+    targetNamespace="http://www.examples.com/wsdl/HelloService.wsdl"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:tns="http://www.examples.com/wsdl/HelloService.wsdl"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</definitions>
+
+<!-- -->
+<message name="getLluviaRequest">
+    <part name="ciudad" type="xsd:string" />
+</message>
+<message name="getLluviaResponse">
+    <part name="getLluviaReturn" type="tns:int"
+    />
+</message>
+
+<!-- -->
+<types>
+    <schema targetNamespace="http://example.com/stockquote.xsd"
+        xmlns="http://www.w3.org/2000/10/XMLSchema">
+
+        <element name="getLluviaRequest">
+            <complexType>
+                <all>
+                    <element name="ciudad" type="string" />
+                </all>
+            </complexType>
+        </element>
+
+        <element name="getLluviaResponse">
+            <complexType>
+                <all>
+                    <element name="lluviaPorcentaje" type="int" />
+                </all>
+            </complexType>
+        </element>
+
+    </schema>
+</types>
+
+<!-- -->
+<portType name="LluviaPortType">
+    <operation name="getlluviaCompleto">
+        <input message="tns:getLluviaRequest" />
+        <output message="tns:getLluviaResponse" />
+    </operation>
+</portType>
+
+<!-- -->
+<binding name="LluviaPortBinding" type="tns:int">
+    <soap:binding transport="http:// schemas.xmlsoap.org/ soap/ http"
+        style="document" />
+    <operation name="getLluviaCompleto">
+        <soap:operation soapAction="" />
+        <input>
+            <soap:body use="literal" />
+        </input>
+        <output>
+            <soap:body use="literal" />
+        </output>
+    </operation>
+</binding>
+    
