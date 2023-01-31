@@ -1,0 +1,27 @@
+<h1>Listin Telefonico</h1>
+<table>
+    <thead>
+        <tr><td>Nombre</td><td>Telefono</td></tr>
+    </thead>
+    <tbody >
+        
+        <tr *ngFor="let telefono of telefonos">
+            <td>{{telefono.name}}</td>
+            <td>{{telefono.telf}}</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+<h2>Añadir nuevo Telefono</h2>
+<form [formGroup]="telefonoForm" (ngSubmit)="onSubmit(telefonoForm.value)">
+
+    <label for="name">
+        Nombre
+    </label>
+    <input type="text" id="name" formControlName="name">
+    <label for="telf">Telefono</label>
+    <input type="tel" id="telf" formControlName="telf">
+
+    <button class="button" type="submit">Guardar</button>
+</form>
