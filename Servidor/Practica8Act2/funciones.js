@@ -1,4 +1,3 @@
-
 // Exportacion de las funciones
 module.exports = {sumar, restar, esPrimo, esPar, factorial};
 // Funciones basicas del programa

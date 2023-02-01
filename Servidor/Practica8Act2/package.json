@@ -8,7 +8,7 @@
     "dev2": "npx nodemon index.js 2 2 3",
     "dev3": "npx nodemon index.js 3 2 3",
     "dev4": "npx nodemon index.js 4 2 3",
-    "dev5": "npx nodemon index.js 5 2 3",
+    "dev5": "npx nodemon index.js 5 5 3",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

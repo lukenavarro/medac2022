@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesion</title>
+    <style>
+        .box{
+            background-color: rgb(161, 238, 238);
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border:1px solid black;
+            margin-top: 220px;
+        }       
+        .enviar{
+            margin-top: 20px;
+            text-align: center;
+            margin-left: 60px;
+            margin-bottom: 20px;
+        }
+        body{
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div class ="box">
+        <form  method="post" >
+            <h2 class = "loginText">Nombre de usuario</h2>
+            <input name = "usuario" placeholder="Nombre de usuario">
+            <h2 class = "contraseñaText">Contraseña</h2>
+            <input name = "contraseña" type="password" placeholder="contraseña">
+            <br>
+            <input class= "enviar" type="submit">
+        </form>
+        <a href="home.php">Home</a>
+        <a href="establecerConexion.php">establecerConexion</a>
+        <a href="eliminarConexion.php">eliminarConexion</a>
+
+    </div>
+    
+</body>
+</html>
