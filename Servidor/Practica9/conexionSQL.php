@@ -6,19 +6,18 @@ function establecerConexion($servidor,$usuario,$contrasenia,$baseDatos){
 }
 function obtenerDatos($conexion){
     $valores = $conexion->query("SELECT * FROM usuarios");
-    echo "<table>";
-    echo "<tr>";
-    echo "<td> ID </td>";
-    echo "<td> NOMBRE </td>";
-    echo "<td> Apellidos </td>";
-    echo "</tr>";
-    while($row = $valores ->fetch_assoc($valores))
+    echo "<table>\n";
+    echo "<tr>\n";
+    echo "<td> ID </td>\n";
+    echo "<td> NOMBRE </td>\n";
+    echo "<td> Apellidos </td>\n";
+    echo "</tr>\n";
+    while($row = mysqli_fetch_array($valores,MYSQL_ASSOC))
         echo "<tr>";
         echo "<td>".$row["id"]."</td><td>".$row["nombre"]."</td><td>".$row["apellidos"]."</td>";
         echo "</tr>";
     echo "</table>";
     $valores -> free();
-    $conexion -> next_result();
     $conexion -> close();
 
     

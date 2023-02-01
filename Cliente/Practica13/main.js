@@ -1,6 +1,13 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+import { grados } from "./conversionGrados";
+import { conversionGrados } from "./conversionGrados";
 function convertirGrados() {
-    let elemento = document.getElementById("solucion");
-    elemento === null || elemento === void 0 ? void 0 : elemento.innerHTML = "Hola";
+    var _a;
+    let solucion = document.getElementById("solucion");
+    let valor = parseInt(document.getElementById("grados").value);
+    if ((_a = document.getElementById("celsius")) === null || _a === void 0 ? void 0 : _a.ariaChecked) {
+        solucion.innerHTML += conversionGrados.convertirGrados(valor, grados.C);
+    }
+    else {
+        solucion.innerHTML += conversionGrados.convertirGrados(valor, grados.F);
+    }
 }
