@@ -1,5 +1,5 @@
 <?php
-    //Declaración de la uri y exportacion d las funciones al servidor
+    //Declaración de la uri y exportacion de las funciones al servidor
     $uri = "http://localhost/";
     $server = new SoapServer(null,array('uri'=> $uri));
     $server -> addFunction("sumar");
