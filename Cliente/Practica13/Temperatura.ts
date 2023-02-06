@@ -2,7 +2,7 @@ export enum grados{
     C= 1,
     F= 2
 }
-export class conversionGrados{
+export class Temperatura{
    
      static convertirGrados(numGrados:number, tipo:grados = grados.C):number{
         if(tipo == grados.C){

@@ -1,12 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.conversionGrados = exports.grados = void 0;
-var grados;
+export var grados;
 (function (grados) {
     grados[grados["C"] = 1] = "C";
     grados[grados["F"] = 2] = "F";
-})(grados = exports.grados || (exports.grados = {}));
-class conversionGrados {
+})(grados || (grados = {}));
+export class Temperatura {
     static convertirGrados(numGrados, tipo = grados.C) {
         if (tipo == grados.C) {
             return ((numGrados * 9) / 5) + 32;
@@ -16,4 +13,3 @@ class conversionGrados {
         }
     }
 }
-exports.conversionGrados = conversionGrados;
