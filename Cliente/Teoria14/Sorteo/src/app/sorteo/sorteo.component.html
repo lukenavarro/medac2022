@@ -1,0 +1,27 @@
+<table>
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>NOMBRE</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let persona of Personas">
+            <td>{{persona.ID}}</td>
+            <td>{{persona.Nombre}}</td>
+            <td><a href ="#" (click)="borrarPersona(persona.ID -1)">Borrar</a></td>
+        </tr>
+    </tbody>
+</table>
+<h2>Insertar Persona</h2>
+
+<form [formGroup]="personaForm" (ngSubmit) = "onSubmit(personaForm.value)">
+    <label for="nombre">Nombre</label>
+    <input type = "text" name ="name" id ="name" formControlName = "name">
+    <input type ="submit">
+</form>
+<br>
+<button (click)="obtenerGanador()">Realizar Sorteo</button>
+
+<p *ngIf="personaGanador != null"> {{personaGanador.Nombre}}</p>

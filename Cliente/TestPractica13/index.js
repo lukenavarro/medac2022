@@ -9,13 +9,10 @@ function convertir(){
 
     let valor = document.getElementsByName("valor")[0].value;
     let tipo = document.getElementsByName("tipo")[0].value;
-    let resultado = "";
+
     let temperatura = new Temperatura();
-    if(document.getElementById("C").checked){
-        resultado = temperatura.convertir(valor,TipoConversion.C);
-    }else{
-        resultado = temperatura.convertir(valor,TipoConversion.F);
-    }
+    let tipoTemp  = (tipo == "C") ? TipoConversion.C:TipoConversion.F;
+    let resultado =  temperatura.convertir(valor,tipoTemp);
 
     document.getElementById("resultado").innerHTML=resultado;
 
