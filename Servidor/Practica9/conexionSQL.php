@@ -1,28 +1,25 @@
 <?php
-function establecerConexion($servidor,$usuario,$contrasenia,$baseDatos){
-    $conexion = new mysqli($servidor,$usuario,$contrasenia,$baseDatos) or die("Error al establecer la conexion");
-    return $conexion;
-    
-}
-function obtenerDatos($conexion){
-    $valores = $conexion->query("SELECT * FROM usuarios");
-    echo "<table>\n";
-    echo "<tr>\n";
-    echo "<td> ID </td>\n";
-    echo "<td> NOMBRE </td>\n";
-    echo "<td> Apellidos </td>\n";
-    echo "</tr>\n";
-    while($row = mysqli_fetch_array($valores,MYSQL_ASSOC))
-        echo "<tr>";
-        echo "<td>".$row["id"]."</td><td>".$row["nombre"]."</td><td>".$row["apellidos"]."</td>";
-        echo "</tr>";
-    echo "</table>";
-    $valores -> free();
-    $conexion -> close();
-
-    
+//Establecer conexion con la bae de datos y seleccionar la base de datos, utilizaremos la libreria mysqli ya que es la mas actualizada
+$conexion = mysqli_connect("localhost", "root", "") or die("No hemos podido establecer conexion con la base de datos");
+echo "Conexion Establecida con la base de datos";
+mysqli_select_db($conexion, "practica9servidor");
+//Realizamos la peticion de datos a la base de datos
+$query = mysqli_query($conexion,"SELECT * FROM usuarios ") or die ("No se ha podido recoger la query establecida");
+//Procesamiento de los datos
+echo "<table>";
+echo "<tr>\n<td>ID</td>\n<td>Nombre</td>\n<td>Apellido</td>\n</tr>";
+while ($linea = mysqli_fetch_array($query)){
+    echo "\t <tr> \n";
+    echo "<td>".$linea["ID"]."</td>";
+    echo "<td>".$linea["Nombre"]."</td>";
+    echo "<td>".$linea["Apellidos"]."</td>";
+    echo "\t </tr> \n";
 
 }
-$conexion = establecerConexion("localhost","root","","practica9servidor");
-obtenerDatos($conexion);
+echo "</table>";
+//Liberamos los datos y desconectamos de la base de Datos
+mysqli_free_result($query);
+mysqli_close($conexion);
+echo "Desconexion con exito de la base de Datos";
+
 ?>
