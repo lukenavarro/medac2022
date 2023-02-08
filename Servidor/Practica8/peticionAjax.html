@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>peticion Ajax Eltiempo.net</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        //Creamos un XMLHTTPRequest que va a ser nuestro objeto con el cual realizaremos la peticion a la api de la pagina de eltTiempo.net
+        const peticionAPI = new XMLHttpRequest();
+        //Establecemos la url para hacer la peticionAPI a la API
+        const url = "https://www.el-tiempo.net/api/json/v2/home";
+        // Abrimos nuestra peticion con la URL y el metodo de la peticion en este caso el GET
+        peticionAPI.open("GET", url, true);
+        peticionAPI.onreadystatechange = function(){
+            //Si comple el estado de estar listo lanazamos la API 
+            if(peticionAPI.readyState==4){
+                //Guardamos el resultado 
+                var result =peticionAPI.responseText;
+                //mostramos el resultado
+                document.getElementById("p").innerHTML = result;
+            }
+        }
+        //Enviamos la peticion 
+        peticionAPI.send();
+        
+    </script>
+    <p id="p"></p>
+</body>
+</html></html>

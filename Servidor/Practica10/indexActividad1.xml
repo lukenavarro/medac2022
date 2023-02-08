@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope
+    xmlns:env="http://www.w3.org/2005/03/soap-envelope"
+    xmlns:ns1="temperatura.php">
+    <env:Header/>
+        <!-- Declararmos los env body y hacemos la llamada al metodo para obtener el porcentaje de lluvia en Barcelona-->
+        <env:Body>
+            <ns1:getPorcentaje>
+                <referencia>Barcelona</referencia>
+            </ns1:getPorcentaje>
+            <!--Gestionamos la respuesta como tipo float y lo devolvemos-->
+            <ns1:getPorcentajeRespuesta>
+                <return xsi:type = "xsd:float">El porcentaje es: %</return>
+            </ns1:getPorcentajeRespuesta>
+        </env:Body>
+</env:Envelope>
