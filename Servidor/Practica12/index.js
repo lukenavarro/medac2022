@@ -16,6 +16,3 @@ server.get('/' ,function(petecion, respuesta){
 var serverOn = server.listen(3000,function(){
     console.log("Escucha del servidor en el puerto 3000");
 })
-
-
-
