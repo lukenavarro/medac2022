@@ -6,13 +6,14 @@
   "scripts": {
     "compile": "tsc",
     "build": "npm run compile && docker build -t temp .",
-    "start": "docker run --rm -p 80:80 temp"
+    "start": "docker run --rm -p 80:80 --name temperatura temp",
+    "stop": "docker stop temperatura "
   },
   "keywords": [
     "converter",
     "temp"
   ],
-  "author": "yomismo",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "typescript": "^4.9.5"

@@ -8,11 +8,17 @@ document.getElementById("btn").addEventListener(
 function convertir(){
 
     let valor = document.getElementsByName("valor")[0].value;
-    let tipo = document.getElementsByName("tipo")[0].value;
-
+    let tipos = document.getElementsByName("tipo");
+    let tipoTemp = null;
     let temperatura = new Temperatura();
-    let tipoTemp  = (tipo == "C") ? TipoConversion.C:TipoConversion.F;
-    let resultado =  temperatura.convertir(valor,tipoTemp);
+    console.log(tipos);
+    for(let radio of tipos){
+        if(radio.checked){
+            tipoTemp = radio.value;
+        }
+    }
+    let tipoConvrs  = (tipoTemp == "C") ? TipoConversion.C:TipoConversion.F;
+    let resultado =  temperatura.convertir(valor,tipoConvrs);
 
     document.getElementById("resultado").innerHTML=resultado;
 
