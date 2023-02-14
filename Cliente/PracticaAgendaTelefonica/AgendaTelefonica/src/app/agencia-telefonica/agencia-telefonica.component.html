@@ -1,0 +1,26 @@
+<h2>Listin Telefonico</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Telefono</th>
+    </tr>
+    <tr *ngFor="let contacto of ArrayContactos ">
+        <td>{{contacto._id}}</td>
+        <td>{{contacto._nombre}}</td>
+        <td>{{contacto._telefono}}</td>
+        <td><a  href = "#" (click)="borrarContacto(contacto._id-1)">Borrar</a></td>
+    </tr>
+</table>
+<h2>Insertar Contacto</h2>
+<form [formGroup]="telefonoForm"  (ngSubmit) = "onSubmit(telefonoForm.value)">
+    <label for="nombre">Nombre</label>
+    <input type="text" formControlName="nombre">
+    <br>
+    <br>
+    <label for = "telefono">Telefono</label>
+    <input type="number" formControlName="telefono">
+    <br>
+    <br>
+    <input type="submit">
+</form>
